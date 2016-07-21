@@ -12,7 +12,7 @@ public class EmailTemplates {
 	private String    mailSender;
 	private String    senderName;
 	private String    mailSubject;
-	private String    mailBody;
+	private String    mailBody = "Hi ${NAME} you are ${DESC} ..";
 	private Boolean   recordstatus;
 	private Timestamp datecreated;
 	private Timestamp datemodified;
@@ -21,7 +21,7 @@ public class EmailTemplates {
 ExecutorService executor = Executors.newSingleThreadExecutor();
             executor.execute(new Thread(() -> {
                 String name = "STANIMIR";
-                String descr = "DEVELOPER";
+                String desc = "DEVELOPER";
                     try {
                         MailContainer mailContainer = new MailContainer();
                         mailContainer.addToRecipient(template.getEmailRecipient());
@@ -31,7 +31,7 @@ ExecutorService executor = Executors.newSingleThreadExecutor();
 
                         Map<String, String> parameterMap = new HashMap<>();
                         parameterMap.put("NAME", name);
-                        parameterMap.put("DESC", descr);
+                        parameterMap.put("DESC", desc);
 
                         mailContainer.setBody(MailTemplateManager.applyTemplate(template.getMailBody(), parameterMap));
 
