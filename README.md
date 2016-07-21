@@ -1,6 +1,6 @@
 # MailTemplateManager
 
-template manager for javax mail. Currently send emails using Gmail SMTP - it`s need to set your user and pass in mail_config.properties (move this file in your resource folder)
+template manager for javax mail. Currently send emails using Gmail SMTP - it`s need to set your user and pass in mail_config.properties (move src/test/resources/mail_config.properties file in your app resource folder)
 
 ## Usage 
 replace massage body with parameters
