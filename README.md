@@ -2,7 +2,7 @@
 
 template manager for javax mail. Currently send emails using Gmail SMTP - it`s need to set your user and pass in mail_config.properties
 
-#### Usage replce massage body with parameters
+#### Usage replace massage body with parameters
 ```java
 public class EmailTemplates {
 	private Integer   id;
